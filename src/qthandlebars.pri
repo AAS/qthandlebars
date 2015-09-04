@@ -1,13 +1,15 @@
+QT += qml
+
 SOURCES += \
-	qthandlebars.cpp
+	$$PWD/qthandlebars.cpp
 
 HEADERS += \
-	qthandlebars.h \
-	qthandlebars_global.h
+	$$PWD/qthandlebars.h \
+	$$PWD/qthandlebars_global.h
 
 RESOURCES += \
-	qthandlebars.qrc
+	$$PWD/qthandlebars.qrc
 
 OTHER_FILES += \
-	js/handlebars.js \
-	js/LICENSE
+	$$PWD/js/handlebars.js \
+	$$PWD/js/LICENSE

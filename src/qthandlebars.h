@@ -36,7 +36,7 @@ public:
 	QJsonObject::iterator insert(const QString &key, QVariantMap &map);
 	QJsonObject::iterator insert(const QString &key, QMap<QString, QString> &map);
 #ifdef QTHANDLEBARS_WITH_SQL
-	QJsonObject::iterator insert(const QString &key, QSqlQuery query, bool onlyFirst);
+	QJsonObject::iterator insert(const QString &key, QSqlQuery query, bool onlyFirst = false);
 #endif
 	QString getJsonAsString() const;
 
