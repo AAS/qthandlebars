@@ -165,7 +165,7 @@ QJsonObject::iterator QtHandlebars::insert(const QString &key, QSqlQuery query, 
 		{
 			if(r.field(i).type() == QVariant::Date && !this->_dateFormat.isEmpty())
 				o.insert(r.fieldName(i), r.value(i).toDate().toString(this->_dateFormat));
-			if(r.field(i).type() == QVariant::Time && !this->_timeFormat.isEmpty())
+			else if(r.field(i).type() == QVariant::Time && !this->_timeFormat.isEmpty())
 				o.insert(r.fieldName(i), r.value(i).toTime().toString(this->_timeFormat));
 			else if(r.field(i).type() == QVariant::DateTime && !this->_datetimeFormat.isEmpty())
 				o.insert(r.fieldName(i), r.value(i).toDate().toString(this->_datetimeFormat));
