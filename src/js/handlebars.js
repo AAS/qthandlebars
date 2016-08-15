@@ -1,6 +1,6 @@
 /*!
 
- handlebars v4.0.3
+ handlebars v4.0.5
 
 Copyright (C) 2011-2015 by Yehuda Katz
 
@@ -275,7 +275,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _logger2 = _interopRequireDefault(_logger);
 
-	var VERSION = '4.0.3';
+	var VERSION = '4.0.5';
 	exports.VERSION = VERSION;
 	var COMPILER_REVISION = 7;
 
@@ -327,7 +327,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _utils.extend(this.partials, name);
 	    } else {
 	      if (typeof partial === 'undefined') {
-	        throw new _exception2['default']('Attempting to register a partial as undefined');
+	        throw new _exception2['default']('Attempting to register a partial called "' + name + '" as undefined');
 	      }
 	      this.partials[name] = partial;
 	    }
@@ -1295,6 +1295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (root.Handlebars === Handlebars) {
 	      root.Handlebars = $Handlebars;
 	    }
+	    return Handlebars;
 	  };
 	};
 
